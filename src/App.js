@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import NavBar from './components/NavBar/navbar.component';
+
 class App extends Component {
   constructor() {
     super();
@@ -11,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        
+        <NavBar />
       </div>
     );
   }
