@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import NavBar from './components/NavBar/navbar.component';
+import CreateCalendar from './pages/event/CreateEvent.page';
 
 class App extends Component {
   constructor() {
@@ -12,8 +12,8 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
-        <NavBar />
+      <div className='container'>
+        <CreateCalendar />
       </div>
     );
   }
