@@ -45,14 +45,17 @@ class CreateEvent extends Component {
                     <input type="text" onChange={this.onNameChange} placeholder='Event name'/>
 
                     <div className="form-inline">
-                        <ImageField onChange={this.onStartDateChange} src={1} type="date"/>
+                        <ImageField onChange={this.onStartDateChange} placeholder='Start date' type="date"/>
                     </div>
                         
                     <div className="form-inline">
-                        <ImageField onChange={this.onEndDateChange} src={1} type="date"/>
+                        <ImageField onChange={this.onEndDateChange} placeholder='End date' type="date"/>
                     </div>
 
-                    <ImageField onChange={this.onDescriptionChange} src={1} placeholder="Description" tag="t"/>
+                    <ImageField onChange={this.onDescriptionChange} placeholder="Description" tag="t"/>
+                    <button className="btn btn-primary" type='submit'>
+                        Submit
+                    </button>
                 </form>
             </div>
         )

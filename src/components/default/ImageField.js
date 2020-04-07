@@ -5,6 +5,13 @@ function ImageField({onChange, src, name, type, placeholder, required, tag, chil
     const handleChange =(e)=>{
         onChange(e);
     }
+    var objRep = null;
+
+    if(typeof src === "string"){
+        objRep = <img src={src} alt="input-img" />;
+    }else{
+        objRep = src;
+    }
 
     var mainTag = null;
     switch (tag) {
@@ -51,7 +58,7 @@ function ImageField({onChange, src, name, type, placeholder, required, tag, chil
     
     return(
         <div className="img-form">
-            <img src={src} alt="input-img" />
+            {objRep}
             {mainTag}
         </div>
     );
