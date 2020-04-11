@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  font-weight: 400;
+  font-weight: 200;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -9,8 +9,9 @@
   -ms-user-select: none;
   user-select: none;
   border: 1px solid transparent;
-  padding: .375rem .75rem;
-  font-size: 1rem;
+  padding: .37rem .65rem;
+  margin-left: .2rem;
+  font-size: .8rem;
   line-height: 1.5;
   border-radius: .25rem;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -20,6 +21,12 @@
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
 }
 
 .btn:not(:disabled):not(.disabled) {
