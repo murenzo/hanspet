@@ -6,7 +6,7 @@ class CreateEvent extends React.Component {
     constructor() {
         super();
         this.state = {
-            eventName: '',
+            name: '',
             startDate: '',
             endDate: '',
             description: ''
@@ -21,25 +21,27 @@ class CreateEvent extends React.Component {
     handleSubmit = event => {
         event.preventDefault();
 
-        this.setState({ eventName: '', startDate: '', endDate: '', description: '' })
+        this.setState({ name: '', startDate: '', endDate: '', description: '' })
     }
 
     render() {
+        const { name, startDate, endDate, description } = this.state;
+
         return (
             <div className='mw7 center'>
                 <h2>Create Event</h2>
                 <form className="form-block" onSubmit={this.handleSubmit}>
-                    <input type="text" name='eventName' onChange={this.handleChange} placeholder='Event name' />
+                    <input type="text" name='name' onChange={this.handleChange} value={name} placeholder='Event name' />
 
                     <div className="form-inline">
-                        <ImageField name='startDate' onChange={this.handleChange} placeholder='Start date' type="date" />
+                        <ImageField name='startDate' onChange={this.handleChange} value={startDate} placeholder='Start date' type="date" />
                     </div>
 
                     <div className="form-inline">
-                        <ImageField name='endDate' onChange={this.handleChange} placeholder='End date' type="date" />
+                        <ImageField name='endDate' onChange={this.handleChange} value={endDate} placeholder='End date' type="date" />
                     </div>
 
-                    <ImageField name='description' onChange={this.handleChange} placeholder="Description" tag="t" />
+                    <ImageField name='description' onChange={this.handleChange} value={description} placeholder="Description" tag="t" />
 
                     <button className="btn btn-primary" type='submit'>
                         Submit
