@@ -5,7 +5,7 @@ import CreateEvent from './components/create-event/create-event.component';
 import EventList from './components/event-list/event-list.component';
 import EventCard from './components/event-item/event-item.component';
 import CreateSubject from './components/create-subject/create-subject.component';
-import SubjectList from './components/subject-list/subject-list.component';
+import ViewSubject from './pages/subject-listing/view-subjects.page';
 
 class App extends Component {
   constructor() {
@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <div className="mw9 center ph3-ns">
         <div className="cf ph2-ns">
-          <SubjectList />
+          <ViewSubject />
           {/* <CreateSubject /> */}
           {/* <EventList /> */}
           {/* <CreateEvent /> */}
